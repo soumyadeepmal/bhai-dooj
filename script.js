@@ -42,7 +42,7 @@ scene.addEventListener('click',async()=>{
  if(busy)return;busy=true;hint.textContent='';scene.classList.add('go');
  await move([REST,LIFT,TOUCH],1300);
  tika.setAttribute('rx','6.5');tika.setAttribute('ry','10');
- smile.setAttribute('d','M298 158 Q315 176 332 158');
+ smile.setAttribute('d','M302 162 Q315 178 328 162');
  scene.classList.add('stamp');petals();
  await wait(700);
  await move([TOUCH,LIFT,REST],1000);
