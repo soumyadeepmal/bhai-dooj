@@ -1,0 +1,24 @@
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;background:#fff4e0;font-family:Georgia,serif;color:#5a2a10;display:flex;justify-content:center}
+main{width:100%;max-width:560px;padding:20px;text-align:center}
+h1{color:#b3261e;margin:8px 0}
+#hint{margin:0 0 12px;font-size:1.05rem;min-height:1.4em}
+#scene{position:relative;display:block;width:100%;padding:0;border:0;border-radius:18px;overflow:hidden;cursor:pointer;box-shadow:0 6px 20px rgba(0,0,0,.2);background:none;-webkit-tap-highlight-color:transparent}
+#scene svg{display:block;width:100%;height:auto}
+#ring{position:absolute;left:78.75%;top:37.3%;width:46px;height:46px;margin:-23px 0 0 -23px;border:3px solid #d1141c;border-radius:50%;animation:pulse 1.4s ease-out infinite;pointer-events:none}
+@keyframes pulse{0%{transform:scale(.6);opacity:1}100%{transform:scale(1.8);opacity:0}}
+#scene.go #ring{display:none}
+.flame{animation:flick .45s infinite alternate;transform-box:fill-box;transform-origin:50% 100%}
+@keyframes flick{to{transform:scale(1.12,.88) skewX(4deg)}}
+#sparks,#rice{transform-box:fill-box;transform-origin:center}
+#scene.stamp #sparks{animation:spark 1s ease-out}
+#scene.stamp #rice{opacity:1}
+@keyframes spark{0%{opacity:0;transform:scale(.5)}40%{opacity:1}100%{opacity:0;transform:scale(1.7)}}
+#brother,#sister{transform-box:fill-box;transform-origin:50% 100%;animation:breathe 3.2s ease-in-out infinite}
+#sister{animation-delay:-1.4s}
+@keyframes breathe{50%{transform:scaleY(1.012)}}
+#card{margin-top:16px;padding:18px;background:#fff;border:2px solid #e0a63a;border-radius:16px;animation:rise .8s ease-out}
+#card[hidden]{display:none}
+@keyframes rise{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
+.big{font-size:1.6rem;color:#b3261e;font-weight:bold}.sign{font-style:italic}
+@media (prefers-reduced-motion:reduce){*{animation:none!important}}
